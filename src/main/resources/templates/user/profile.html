@@ -1,0 +1,40 @@
+<main>
+    <legend>My profile</legend>
+     <table class="table-responsive table-bordered center-block">
+
+         <thead>
+         <tr>
+             <th scope="row">Email</th>
+             <td th:text="${user.email}"></td>
+         </tr>
+         <tr>
+             <th scope="row">User Name</th>
+             <td th:text="${user.userName}"></td>
+         </tr>
+         <tr>
+             <th scope="row">Full Name</th>
+             <td th:text="${user.fullName}"></td>
+         </tr>
+         <tr>
+             <th scope="row">Qty Articles</th>
+             <td class="text-center" th:text="${qty}"></td>
+         </tr>
+
+         <tr>
+             <th scope="row">Titles</th>
+             <td>
+
+             <th:block th:each="article : ${articles}">
+                 <div class="col-md-6">
+                     <span th:text="${article}"></span>
+                 </div>
+                 <br/>
+             </th:block>
+             </td>
+         </tr>
+         </thead>
+     </table>
+
+
+
+</main>
